@@ -3,20 +3,20 @@ import styles from './template.module.css';
 function Template() {
   return (
     <div className={styles.container}>
-      <div className={styles.leftSection}>
-        {/* Logo */}
-        <div className={styles.logoContainer}>
-          <img src="/logo.svg" alt="Logo" className={styles.logo} />
-        </div>
+        <div className={styles.leftSection}>
+            {/* Logo */}
+            <div className={styles.logoContainer}>
+                <img src="/logo.svg" alt="Logo" className={styles.logo} />
+            </div>
 
-        {/* Nav Bar */}
-        <div className={styles.navBar}>
-          <span><img src="/home.svg" alt="home-icon" width = '70'/></span>
-          <span><img src="/events.svg" alt="home-icon" width = '70'/></span>
-          <span><img src="/blogs.svg" alt="home-icon" width = '105'/></span>
-          <span><img src="/team.svg" alt="home-icon" width = '105'/></span>
+            {/* Nav Bar */}
+            <div className={styles.navBar}>
+                <span><img src="/home.svg" alt="home-icon" width = '70'/></span>
+                <span><img src="/events.svg" alt="home-icon" width = '70'/></span>
+                <span><img src="/blogs.svg" alt="home-icon" width = '105'/></span>
+                <span><img src="/team.svg" alt="home-icon" width = '105'/></span>
+            </div>
         </div>
-      </div>
 
       {/* Right Section: Content */}
       <div className={styles.rightSection}>
@@ -32,7 +32,7 @@ function Template() {
         <h1>BLAHHHHHHH</h1>
         <h1>BLAHHHHHHH</h1>
         <h1>BLAHHHHHHH</h1>
-        
+
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ html, body {
     align-items: top;
     padding: 1rem 0; 
     width: 100%;
+    padding-bottom: 2rem;
   }
   
   .logo {
@@ -38,7 +39,6 @@ html, body {
     box-sizing: border-box;
     width: 10rem;
     flex-grow: 1; 
-    /* position: fixed; */
   }
 
   .leftSection {
@@ -49,10 +49,12 @@ html, body {
     background-color: black;
     box-sizing: border-box;
     padding-left:2rem;
+    position: fixed;
+    height:100hv;
   }
- 
-  .rightSection{
-    margin-left: 7rem;
-    margin-top: 5rem;
 
+  .rightSection {
+    margin-left: 10rem; /* Align content to the right of the left section */
+    padding: 5rem; /* Add padding for spacing */
+    flex-grow: 1; /* Allow right section to take up the remaining width */
   }
