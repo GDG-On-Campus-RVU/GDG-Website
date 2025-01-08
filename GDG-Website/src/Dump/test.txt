@@ -1,0 +1,14 @@
+{/* Main Content */}
+<div className={`relative flex bg-gray-100 p-6 ${ isOpen ? "ml-36" : "ml-16" } transition-all duration-300`}>
+    {/* Background Image */}
+    <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "../src/Images/Common/Background.png",}}></div>
+
+    {/* Glass Effect */}
+    <div className="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-md"></div>
+
+    {/* Content */}
+    <div className="relative z-10">
+        {/* Replace with actual pages */}
+        <UserProfileCard />
+    </div>
+</div>
