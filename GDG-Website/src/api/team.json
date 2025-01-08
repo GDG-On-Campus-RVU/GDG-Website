@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Sri Krishna R",
+        "surname": "Hebbar",
+        "title": "Technical Lead",
+        "profileImage": "../src/Images/2025/Krishna.png",
+        "links": {
+            "github": "https://github.com/Sri-Krishna-R-Hebbar",
+            "linkedin": "https://www.linkedin.com/in/srikrishnarhebbar/",
+            "portfolio": "#"
+        }
+    },
+    {
+        "name": "Vinay",
+        "surname": "Saunshi",
+        "title": "Technical Member",
+        "profileImage": "../src/Images/2025/Vinay.jpg",
+        "links": {
+            "github": "https://github.com/Vinay-R-S",
+            "linkedin": "https://www.linkedin.com/in/vinay-saunshi-624ab6293",
+            "portfolio": "#"
+        }
+    },
+    {
+        "name": "Vaibhav",
+        "surname": "Kumar",
+        "title": "Technical Member",
+        "profileImage": "../src/Images/2025/Vaibhav.jpg",
+        "links": {
+            "github": "http://github.com/t-vaibhavkumar",
+            "linkedin": "https://www.linkedin.com/in/vaibhav-kumar-458b42283/",
+            "portfolio": "#"
+        }
+    },
+    {
+        "name": "Sushruth V",
+        "surname": "Kamble",
+        "title": "Technical Member",
+        "profileImage": "../src/Images/2025/Sushruth.jpg",
+        "links": {
+            "github": "https://github.com/Sushruthvi",
+            "linkedin": "https://www.linkedin.com/in/sushruth-vi-294116231/",
+            "portfolio": "#"
+        }
+    }
+]

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Violet Sans";
+  src: url("../src/assets/Fonts/VioletSans-Regular.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Violet Sans;
+}
+
+/* body {
+    font-family: VioletSans;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url("../src/assets/Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+  } */
+
+.sub_root {
+  width: 100%;
+  height: auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.bg-logo {
+  height: auto;
+  background-image: url("../src/Images/Common/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  backface-visibility: hidden;
+  will-change: transform;
+  border: 1px solid white;
+}
+
+.bg-logo:hover {
+  transform: scale(1.025);
+  filter: brightness(1.05);
+}
+

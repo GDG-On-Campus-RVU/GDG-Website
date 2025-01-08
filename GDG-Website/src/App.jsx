@@ -1,10 +1,13 @@
 import './App.css'
-import Template from './template';
+import UserProfileCard from "./Components/UserProfileCard/UserProfileCard.jsx"
+import TemplatePage from './Components/TemplatePage/TemplatePage.jsx';
 
 function App() {
-  return(
+  return (
     <>
-      <Template/>
+    <div className="sub-root">
+      <TemplatePage/>
+    </div>
     </>
   )
 }

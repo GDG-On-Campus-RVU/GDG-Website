@@ -1,1 +1,5 @@
 /* You can start with an empty CSS file or add your styles here */ 
+.sub-root {
+    width: 100%;
+    height: auto;
+}
