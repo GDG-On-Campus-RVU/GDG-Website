@@ -11,8 +11,8 @@ function Template() {
 
             {/* Nav Bar */}
             <div className={styles.navBar}>
-                <span><img src="/home.svg" alt="home-icon" width = '70'/></span>
-                <span><img src="/events.svg" alt="home-icon" width = '70'/></span>
+                <span className='home-icon'><img src="/home.svg" alt="home-icon" width = '70' cursor = 'pointer'/></span>
+                <span className='events-icon'><img src="/events.svg" alt="home-icon" width = '70'/></span>
                 <span><img src="/blogs.svg" alt="home-icon" width = '105'/></span>
                 <span><img src="/team.svg" alt="home-icon" width = '105'/></span>
             </div>
