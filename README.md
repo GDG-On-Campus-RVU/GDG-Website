@@ -34,3 +34,8 @@
     ├── README.md
     └── vite.config.js
 ```
+
+## Steps to Create your Webpages and Organize them
+🔹We are using the TemplatePage as our base template with the SideNavbar component inside and the rest of the right section is for the pages to be displayed<br>
+🔹Create your Respective Page Folders and create your jsx and module.css files there<br>
+🔹Import your Page from your respective Page folder to TemplatePage.jsx and place it accordingly in the order of icons in the SideNavBar<br>
