@@ -20,18 +20,8 @@ function Template() {
 
       {/* Right Section: Content */}
       <div className={styles.rightSection}>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
-        <h1>BLAHHHHHHH</h1>
+        <h1>This is GDG</h1>
+       
 
       </div>
     </div>
