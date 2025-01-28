@@ -1,0 +1,37 @@
+.blog-container {
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  overflow: visible;
+}
+.blog-swiper {
+  width: 100%;
+  height: 450px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: visible !important;
+}
+.swiper-wrapper {
+  overflow: visible !important;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(0, 255, 255, 0.4);
+}
+.swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.8);
+  opacity: 0.5;
+  filter: blur(3px);
+}
