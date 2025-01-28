@@ -2,7 +2,6 @@
 
 ## Structure of Directory
 ```
-    GDG-Website/
     ├── node_modules/
     ├── public/
     │   ├── ...
