@@ -138,11 +138,8 @@ const TemplatePage = ({children}) => {
 
 
             {/* Main Content */}
-            {/* <div className={`w-full flex-1 h-auto gap-10 bg-gray-100 ${isOpen ? 'ml-36' : 'ml-16'} transition-all duration-300 bg-zinc-900`}> */}
-            <div className={`w-full flex-1 h-auto gap-10 bg-gray-100 transition-all duration-300 bg-zinc-900 ml-24`}>
-                {/* {Object.entries(teamsData).map(([teamName, members], index) => (
-                    <TeamPage key={index} teamName={teamName} members={members} />
-                ))} */}
+            {/* <div className={`w-full flex-1 h-auto gap-10 bg-gray-100 transition-all duration-300 bg-zinc-900 ml-24`}> */}
+            <div className="flex-1 min-h-screen bg-zinc-900 ml-24 overflow-auto">
                 {children}
             </div>
         </div>
