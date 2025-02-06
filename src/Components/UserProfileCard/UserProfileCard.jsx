@@ -3,14 +3,14 @@ import styles from './UserProfileCard.module.css';
 const UserProfileCard = ({ name, surname, title, image, github, linkedin, website }) => {
     return (
         <>
-            <div className="w-[240px] h-[360px] bg-white rounded-lg shadow-md overflow-hidden bg-logo">
-                <div className={`w-full h-auto p-3 ${styles.glass}`}>
+            <div className="w-[240px] h-[340px] bg-white rounded-lg shadow-md overflow-hidden bg-logo">
+                <div className={`w-full h-full p-[15px] ${styles.glass}`}>
                     <div>
-                        <img className="w-[200] h-[190] rounded-md object-cover" src={image} alt={name} />
+                        <img className="w-[200] h-[200] rounded-md object-cover" src={image} alt={name} />
                         <div className="p-2">
                             <h2 className="text-xl text-white">{name}</h2>
                             <h2 className="text-xl text-white">{surname}</h2>
-                            <p className="text-gray-300">{title}</p>
+                            <p className="text-gray-300 text-sm">{title}</p>
                             <div className="flex flex-row justify-between space-x-3 mt-4">
                                 {/* Github link */}
                                 <div className='left-links flex space-x-3'>

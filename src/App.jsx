@@ -6,9 +6,7 @@ function App() {
   return (
     <>
     <div className="sub-root">
-      {/* <TemplatePage/> */}
-      {/* <TeamPage/> */}
-      <Blog/>
+      <TeamPage/>
     </div>
     </>
   )
