@@ -1,33 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import Login from '../Login.jsx';
-// import TeamPage from '../TeamPage/TeamPage.jsx';
+import FullPageScroll from './FullPageScroll.jsx';
 
-const TemplatePage = ({children}) => {
-    // const [isOpen, setIsOpen] = useState(false);
-    const [teamsData, setTeamsData] = useState(null);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchTeamsData = async () => {
-            try {
-                const response = await import('../../api/all_teams.json');
-                setTeamsData(response.teams);
-            } catch (err) {
-                setError(err);
-                console.error("Error fetching team data:", err);
-            }
-        };
-
-        fetchTeamsData();
-    }, []);
-
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
-
-    if (!teamsData) {
-        return <div>Loading team data...</div>;
-    }
+function HomePage(){
 
     return (
         <div className="flex">
@@ -140,10 +114,10 @@ const TemplatePage = ({children}) => {
             {/* Main Content */}
             {/* <div className={`w-full flex-1 h-auto gap-10 bg-gray-100 transition-all duration-300 bg-zinc-900 ml-24`}> */}
             <div className="flex-1 min-h-screen bg-zinc-900 ml-24 overflow-auto">
-                {children}
+                <FullPageScroll/>
             </div>
         </div>
     );
 };
 
-export default TemplatePage;
+export default HomePage;
