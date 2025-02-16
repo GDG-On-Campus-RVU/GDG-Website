@@ -1,37 +1,133 @@
+/* General Blog Container */
 .blog-container {
   max-width: 100%;
-  margin: auto;
+  margin-left: 0;
   text-align: center;
-  padding: 20px;
-  color: white;
+  padding: 30px;
+  color: #ffffff;
+  background: #000000; /* Google's blue */
   overflow: visible;
+  border-radius: 15px;
 }
+
+/* Swiper Container */
 .blog-swiper {
   width: 100%;
-  height: 450px;
-  padding-top: 50px;
+  height: 500px;
+  padding-top: 40px;
   padding-bottom: 50px;
   overflow: visible !important;
 }
-.swiper-wrapper {
-  overflow: visible !important;
-}
+
+/* Swiper Slide */
 .swiper-slide {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  width: 300px;
-  height: 300px;
-  background: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  max-width: 680px;
+  height: 400px;
+  background: #0f4db6; /* Darker shade of blue */
   border-radius: 20px;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6),
-    0 0 60px rgba(0, 255, 255, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(10, 80, 180, 0.6);
+  padding: 15px;
 }
+
+/* Inactive Slide */
 .swiper-slide:not(.swiper-slide-active) {
-  transform: scale(0.8);
-  opacity: 0.5;
-  filter: blur(3px);
+  transform: scale(0.85);
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+/* Hover Effect */
+.swiper-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(10, 80, 180, 0.8);
+}
+
+/* Link Styling */
+.slide-content a {
+  color: #dbeafe;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.slide-content a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Author Styling */
+.slide-content div {
+  color: #e3f2fd;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background: rgba(10, 80, 180, 0.6);
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  opacity: 0.8;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Active Pagination Bullet */
+.swiper-pagination-bullet-active {
+  background: rgba(10, 80, 180, 1);
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(10, 80, 180, 0.8);
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: rgba(10, 80, 180, 0.2);
+  border: 2px solid #dbeafe;
+  color: #dbeafe;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.read-more-btn:hover {
+  background: #dbeafe;
+  color: #0f4db6;
+  box-shadow: 0 0 10px #dbeafe, 0 0 20px #dbeafe;
+}
+.swiper-slide-custom {
+  width: 100% !important; /* Ensure each slide takes the full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-header {
+  width: 100%; /* Full width banner */
+  height: 250px; /* Adjust height as per your preference */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensures it behaves like a banner */
+  border-radius: 10px; /* Optional: Add rounded corners for a sleek look */
 }
