@@ -146,7 +146,7 @@ const TemplatePage2 = ({ children }) => {
             </div>
 
             {/* Main Content */}
-            <div className={`flex-1 min-h-screen bg-zinc-900 transition-all ml-${isOpen ? "24" : "0"} overflow-auto`}>
+            <div className={`flex-1 min-h-screen bg-black transition-all ml-${isOpen ? "24" : "0"} overflow-auto`}>
                 {children}
             </div>
         </div>
