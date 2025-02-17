@@ -1,4 +1,5 @@
 import './App.css'
+import Blog from './Components/Blog/Blog.jsx'
 // import TemplatePage from './Components/TemplatePage/TemplatePage.jsx';
 // import Blog from './Components/Blog/Blog.jsx';
 import TeamPage from "./Components/TeamPage/TeamPage.jsx"
