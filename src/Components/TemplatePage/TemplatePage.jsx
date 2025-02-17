@@ -1,4 +1,6 @@
+
 import React, { useState, useEffect } from "react";
+
 
 const TemplatePage2 = ({ children }) => {
     const [isOpen, setIsOpen] = useState(true);
