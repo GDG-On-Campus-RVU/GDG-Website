@@ -1,0 +1,37 @@
+
+[
+    {
+      "title": "7 Productivity Hacks I Stole From a Principal Software Engineer",
+      "author": "John Doe",
+      "link": "https://medium.com/code-like-a-girl/7-productivity-hacks-i-stole-from-a-principal-software-engineer-6a8825157198"
+    },
+    {
+      "title": "The 10 Most Common Mistakes JavaScript Developers Make",
+      "author": "Jane Smith",
+      "link": "https://betterprogramming.pub/the-10-most-common-mistakes-javascript-developers-make-23b5749f27e3"
+    },
+    {
+      "title": "5 Essential Machine Learning Algorithms You Should Know",
+      "author": "Michael Johnson",
+      "link": "https://towardsdatascience.com/5-essential-machine-learning-algorithms-you-should-know-55c6182de2eb",
+      "image": "../src/Images/blog/code.jpg"
+    },
+    {
+      "title": "How to Avoid Burnout as a Software Developer",
+      "author": "Emily Davis",
+      "link": "https://medium.com/hackernoon/how-to-avoid-burnout-as-a-software-developer-5e8d2c244142",
+      "image": "../src/Images/blog/computer-coding-banner-img.png"
+    },
+    {
+      "title": "The Truth About Becoming a Full-Stack Developer",
+      "author": "Ben Halpern",
+      "link": "https://dev.to/ben/the-truth-about-becoming-a-full-stack-developer-4po7",
+      "image": "../src/Images/blog/FullStack.jpeg"
+    },
+    {
+      "title": "Why You Should Learn Functional Programming",
+      "author": "Chris Coyier",
+      "link": "https://css-tricks.com/why-you-should-learn-functional-programming/"
+    }
+  ]
+  

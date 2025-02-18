@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 export default function FirstSection() {
     return (
       <div className="h-screen flex flex-col items-center justify-center bg-red-500 text-white text-center p-10">
