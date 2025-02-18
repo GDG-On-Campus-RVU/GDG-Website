@@ -1,16 +1,24 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const sections = [
-  { id: 1, color: "bg-red-500", text: "Welcome to Section 1" },
-  { id: 2, color: "bg-blue-500", text: "This is Section 2" },
-  { id: 3, color: "bg-green-500", text: "Explore Section 3" },
-  { id: 4, color: "bg-yellow-500", text: "Final Section 4" },
-];
+import FirstSection from "./FirstSection";
+import WhyJoinGDGSection from "./WhyJoinGDGSection";
+import EventsSection from "./EventsSection";
+import BlogsSection from "./BlogsSection";
+import TeamSection from "./TeamSection";
 
 export default function FullPageScroll() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false); // Scroll lock
+
+  // Define sections as an array of objects with properties
+  const sections = [
+    { component: <FirstSection />, color: "bg-red-500", text: "First Section" },
+    { component: <WhyJoinGDGSection />, color: "bg-blue-500", text: "Why Join GDG" },
+    { component: <EventsSection />, color: "bg-green-500", text: "Events" },
+    { component: <BlogsSection />, color: "bg-yellow-500", text: "Blogs" },
+    { component: <TeamSection />, color: "bg-purple-500", text: "Team" }
+  ];
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -54,12 +62,13 @@ export default function FullPageScroll() {
         animate={{ translateY: `-${currentSection * 100}vh` }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
-        {sections.map((section) => (
+        {/* Render each section dynamically */}
+        {sections.map((section, index) => (
           <div
-            key={section.id}
+            key={index}
             className={`h-screen flex items-center justify-center ${section.color} text-white text-4xl font-bold`}
           >
-            {section.text}
+            {section.component}
           </div>
         ))}
       </motion.div>
