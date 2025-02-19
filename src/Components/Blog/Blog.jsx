@@ -11,7 +11,7 @@ import './Blog.css';
 
 const Blog = () => {
     return (
-        <TemplatePage>
+
             <div className="blog-container w-full overflow-hidden">
                 <h2 className="text-center text-2xl font-bold mb-6">Blog</h2>
                 <Swiper
@@ -49,7 +49,7 @@ const Blog = () => {
                     ))}
                 </Swiper>
             </div>
-        </TemplatePage>
+      
     );
 };
 

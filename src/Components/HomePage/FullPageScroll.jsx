@@ -14,7 +14,7 @@ export default function FullPageScroll() {
   // Define sections as an array of objects with properties
   const sections = [
     { component: <FirstSection /> },
-    { component: <WhyJoinGDGSection />, color: "bg-blue-500", text: "Why Join GDG" },
+    { component: <WhyJoinGDGSection /> },
     { component: <EventsSection />, color: "bg-green-500", text: "Events" },
     { component: <BlogsSection />, color: "bg-yellow-500", text: "Blogs" },
     { component: <TeamSection />, color: "bg-purple-500", text: "Team" }
