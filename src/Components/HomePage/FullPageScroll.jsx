@@ -66,7 +66,7 @@ export default function FullPageScroll() {
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`h-screen flex items-center justify-center text-white text-4xl font-bold`}
+            className={`h-screen flex items-center justify-center text-white text-4xl font-bold bg-black ${section.color}`}
           >
             {section.component}
           </div>
