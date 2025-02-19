@@ -13,7 +13,7 @@ export default function FullPageScroll() {
 
   // Define sections as an array of objects with properties
   const sections = [
-    { component: <FirstSection />, color: "bg-red-500", text: "First Section" },
+    { component: <FirstSection /> },
     { component: <WhyJoinGDGSection />, color: "bg-blue-500", text: "Why Join GDG" },
     { component: <EventsSection />, color: "bg-green-500", text: "Events" },
     { component: <BlogsSection />, color: "bg-yellow-500", text: "Blogs" },
@@ -25,7 +25,7 @@ export default function FullPageScroll() {
       if (isScrolling) return; // Prevent multiple scrolls
 
       setIsScrolling(true);
-      setTimeout(() => setIsScrolling(false), 800); // Lock for 800ms
+      setTimeout(() => setIsScrolling(false), 1000); // Lock for 800ms
 
       if (event.deltaY > 0 && currentSection < sections.length - 1) {
         setCurrentSection((prev) => prev + 1);
@@ -39,7 +39,7 @@ export default function FullPageScroll() {
       if (isScrolling) return;
 
       setIsScrolling(true);
-      setTimeout(() => setIsScrolling(false), 800);
+      setTimeout(() => setIsScrolling(false), 1000);
 
       setCurrentSection((prev) =>
         prev < sections.length - 1 ? prev + 1 : prev
@@ -66,7 +66,7 @@ export default function FullPageScroll() {
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`h-screen flex items-center justify-center ${section.color} text-white text-4xl font-bold`}
+            className={`h-screen flex items-center justify-center text-white text-4xl font-bold`}
           >
             {section.component}
           </div>
