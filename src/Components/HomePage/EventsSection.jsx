@@ -1,6 +1,6 @@
 import GlassCardEvent from "./GlassCardEvent";
 import React from "react";
-import eventImage from "../../images/2025/Krishna.webp";
+import eventImage from "../../Images/2025/Krishna.webp";
 
 export default function EventsSection() {
     return (
