@@ -9,8 +9,8 @@ function App() {
     <>
       <div className="sub-root">
         {/* <FullPageScroll /> */}
-        {/* <HomePage /> */}
-        <TeamPage />
+        <HomePage />
+        {/* <TeamPage /> */}
         {/* <Blog/> */}
       </div>
     </>
