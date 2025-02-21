@@ -1,14 +1,12 @@
 import './App.css'
 import Blog from './Components/Blog/Blog.jsx'
 // import TemplatePage from './Components/TemplatePage/TemplatePage.jsx';
-// import Blog from './Components/Blog/Blog.jsx';
+ import Whyjoin from './Components/Whyjoin/whyjoin.jsx';
 import TeamPage from "./Components/TeamPage/TeamPage.jsx"
 import TemplatePage2 from './Components/TemplatePage/TemplatePage.jsx'
 import Template from './Dump/template.jsx'
 
-import Blog from './Components/Blog/Blog.jsx';
 import HomePage from './Components/HomePage/HomePage.jsx';
-
 
 
 function App() {
@@ -16,7 +14,8 @@ function App() {
     <>
     <div className="sub-root">
 
-      <TeamPage/>
+      {/* <TeamPage/> */}
+     <Whyjoin/> 
 
       {/* <Blog/> */}
 
