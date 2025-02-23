@@ -5,7 +5,7 @@
                 "name": "Dyuthi",
                 "surname": "Ramesh",
                 "title": "President",
-                "profileImage": "../src/IMages/2025/DyuthiRamesh.webp",
+                "profileImage": "../src/Images/2025/DyuthiRamesh.webp",
                 "links": {
                     "github": "https://github.com/dyuthiramesh",
                     "linkedin": "https://www.linkedin.com/in/dyuthiramesh",
@@ -16,7 +16,7 @@
                 "name": "Dhanush S",
                 "surname": "Gowda",
                 "title": "Speaker & Content Lead",
-                "profileImage": "../src/IMages/2025/DhanushSG.webp",
+                "profileImage": "../src/Images/2025/DhanushSG.webp",
                 "links": {
                     "github": "https://github.com/Dhanush-S-Gowda",
                     "linkedin": "https://www.linkedin.com/in/dhanush-s-gowda",
@@ -27,7 +27,7 @@
                 "name": "Karmishtha",
                 "surname": "Patnaik",
                 "title": "Design Lead",
-                "profileImage": "../src/IMages/2025/KarmishthaPatnaik.webp",
+                "profileImage": "../src/Images/2025/KarmishthaPatnaik.webp",
                 "links": {
                     "github": "https://github.com/Karmishthap",
                     "linkedin": "https://www.linkedin.com/in/karmishtha-patnaik-7649aa254/",
@@ -218,7 +218,7 @@
                 "name": "Karmishtha",
                 "surname": "Patnaik",
                 "title": "Design Lead",
-                "profileImage": "../src/IMages/2025/KarmishthaPatnaik.webp",
+                "profileImage": "../src/Images/2025/KarmishthaPatnaik.webp",
                 "links": {
                     "github": "https://github.com/Karmishthap",
                     "linkedin": "https://www.linkedin.com/in/karmishtha-patnaik-7649aa254/",
@@ -286,7 +286,7 @@
                 "name": "Dhanush S",
                 "surname": "Gowda",
                 "title": "Speaker & Content Lead",
-                "profileImage": "../src/IMages/2025/DhanushSG.webp",
+                "profileImage": "../src/Images/2025/DhanushSG.webp",
                 "links": {
                     "github": "https://github.com/Dhanush-S-Gowda",
                     "linkedin": "https://www.linkedin.com/in/dhanush-s-gowda",
