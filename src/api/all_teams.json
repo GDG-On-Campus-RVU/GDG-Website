@@ -95,22 +95,11 @@
                 "name": "Apoorv",
                 "surname": "Gadiya",
                 "title": "Technical Member",
-                "profileImage": "../src/Images/2025/Apoorv.webp",
+                "profileImage": "../src/Images/2025/Aproov.webp",
                 "links": {
                     "github": "https://github.com/apoorv7g",
                     "linkedin": "https://www.linkedin.com/in/apoorv-g7/",
                     "portfolio": "https://apoorv7g.github.io/portfolio/index.html"
-                }
-            },
-            {
-                "name": "Aryan",
-                "surname": "Bhajanaka",
-                "title": "Technical Member",
-                "profileImage": "../src/Images/2025/AryanBhajanaka.webp",
-                "links": {
-                    "github": "https://github.com/aryanbhajanka",
-                    "linkedin": "https://www.linkedin.com/in/aryanbhajanka",
-                    "portfolio": "#"
                 }
             },
             {
@@ -374,23 +363,23 @@
             },
             {
                 "name": "Aditya",
-                "surname": "Kumar",
-                "title": "PR Member",
-                "profileImage": "../src/Images/2025/AdityaKumar.webp",
-                "links": {
-                    "github": "https://github.com/AdityaCodeZZZ/",
-                    "linkedin": "https://www.linkedin.com/in/proaditya",
-                    "portfolio": "#"
-                }
-            },
-            {
-                "name": "Aditya",
                 "surname": "Anandh",
                 "title": "PR Member",
                 "profileImage": "../src/Images/2025/AdityaAnandh.webp",
                 "links": {
                     "github": "#",
                     "linkedin": "https://in.linkedin.com/in/aditya-anandh-bb2111255",
+                    "portfolio": "#"
+                }
+            },
+            {
+                "name": "Aditya",
+                "surname": "Kumar",
+                "title": "PR Member",
+                "profileImage": "../src/Images/2025/AdityaKumar.webp",
+                "links": {
+                    "github": "https://github.com/AdityaCodeZZZ/",
+                    "linkedin": "https://www.linkedin.com/in/proaditya",
                     "portfolio": "#"
                 }
             },
@@ -402,6 +391,17 @@
                 "links": {
                     "github": "https://github.com/gtanu13",
                     "linkedin": "https://www.linkedin.com/in/tanushreeg13/",
+                    "portfolio": "#"
+                }
+            },
+            {
+                "name": "Risha",
+                "surname": "N",
+                "title": "PR Member",
+                "profileImage": "../src/Images/2025/RishaN.webp",
+                "links": {
+                    "github": "https://github.com/Risha-Natesh",
+                    "linkedin": "https://www.linkedin.com/in/risha-n/",
                     "portfolio": "#"
                 }
             },
