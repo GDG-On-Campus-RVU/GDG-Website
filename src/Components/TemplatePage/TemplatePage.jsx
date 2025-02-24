@@ -1,6 +1,4 @@
-
 import React, { useState, useEffect } from "react";
-
 
 const TemplatePage2 = ({ children }) => {
     const [isOpen, setIsOpen] = useState(true);
@@ -8,19 +6,19 @@ const TemplatePage2 = ({ children }) => {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsTablet(window.innerWidth < 768);
-            if (window.innerWidth < 768) {
-                setIsOpen(false); // Auto-close on tablet screens
-            }
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setIsTablet(window.innerWidth < 768);
+    //         if (window.innerWidth < 768) {
+    //             setIsOpen(false); // Auto-close on tablet screens
+    //         }
+    //     };
 
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
 
-    const toggleSidebar = () => setIsOpen(!isOpen);
+    // const toggleSidebar = () => setIsOpen(!isOpen);
 
     const menuItems = [
         {
@@ -106,17 +104,18 @@ const TemplatePage2 = ({ children }) => {
     return (
         <div className="flex">
             {/* Sidebar */}
-            <div className={`fixed bg-black text-white h-screen p-4 flex flex-col items-center transition-all duration-300 border-r-2 border-white z-20
+            {/* <div className={`fixed bg-black text-white h-screen p-4 flex flex-col items-center transition-all duration-300 border-r-2 border-white z-20
                             ${isOpen ? "w-24" : "w-0 overflow-hidden"} 
-                            ${isTablet ? "absolute z-50 shadow-lg" : ""}`}>
+                            ${isTablet ? "absolute z-50 shadow-lg" : ""}`}> */}
+            <div className={`fixed bg-black text-white h-screen p-3 flex flex-col items-center transition-all duration-300 border-r-2 border-white z-20`}>
 
                 {/* Toggle Button */}
-                <button
+                {/* <button
                     className="absolute top-4 right-[-30px] bg-gray-800 p-2 rounded-full text-white shadow-md md:hidden"
                     onClick={toggleSidebar}
                 >
                     {isOpen ? "✖" : "☰"}
-                </button>
+                </button> */}
 
                 {/* Logo */}
                 <a href="#" className="text-white mb-4 focus:outline-none">
