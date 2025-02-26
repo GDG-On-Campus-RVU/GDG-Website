@@ -1,0 +1,150 @@
+.glass {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.team-section {
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.team-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.carousel-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.carousel-content {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.arrow-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.arrow-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.team-link-container {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 240px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  background-image: url('../../Images/Common/gdg-logo.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.team-link-container a {
+  width: 100%;
+  height: 100%;
+}
+
+.team-link-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-link-content h2 {
+  color: #FFD700;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.team-link-content p {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .team-showcase {
+    flex-direction: column;
+  }
+
+  .carousel-left {
+    flex-direction: row;
+  }
+
+  .team-link-container {
+    width: 240px;
+    height: 280px;
+  }
+
+  .team-link-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.carousel-content .text-xl {
+  font-size: 20px !important;
+}
+
+/* Add this to reduce spacing between name and surname */
+.carousel-content .p-2 {
+  padding: 0.25rem !important; /* Reduces padding from 0.5rem (p-2) to 0.25rem */
+}
+
+/* Add this to remove margin between name and surname */
+.carousel-content .p-2 h2:first-child {
+  margin-bottom: 0 !important;
+}
