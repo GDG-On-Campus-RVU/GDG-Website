@@ -1,30 +1,19 @@
 import './App.css'
-
-import Blog from './Components/Blog/Blog.jsx'
-// import TemplatePage from './Components/TemplatePage/TemplatePage.jsx';
- import Whyjoin from './Components/Whyjoin/whyjoin.jsx';
-import TeamPage from "./Components/TeamPage/TeamPage.jsx"
-import TemplatePage2 from './Components/TemplatePage/TemplatePage.jsx'
-import Template from './Dump/template.jsx'
-
-import HomePage from './Components/HomePage/HomePage.jsx';
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TeamSection from './Components/Teamsection/teamsection';
+import TeamPage from "./Components/TeamPage/TeamPage.jsx";
 
 function App() {
   return (
-    <>
-
+    <Router>
       <div className="sub-root">
-        {/* <FullPageScroll /> */}
-        {/* <HomePage /> */}
-        <TeamPage />
-         
-        {/* <Blog/> */}
+        <Routes>
+          <Route path="/" element={<TeamSection />} />
+          <Route path="/team" element={<TeamPage />} />
+        </Routes>
       </div>
-
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
