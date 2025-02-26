@@ -1,18 +1,28 @@
 import './App.css'
-import FullPageScroll from "./Components/HomePage/FullPageScroll.jsx"
-import HomePage from "./Components/HomePage/HomePage.jsx"
+
+import Blog from './Components/Blog/Blog.jsx'
+// import TemplatePage from './Components/TemplatePage/TemplatePage.jsx';
+ import Whyjoin from './Components/Whyjoin/whyjoin.jsx';
 import TeamPage from "./Components/TeamPage/TeamPage.jsx"
-import Blog from "./Components/Blog/Blog.jsx"
+import TemplatePage2 from './Components/TemplatePage/TemplatePage.jsx'
+import Template from './Dump/template.jsx'
+
+import HomePage from './Components/HomePage/HomePage.jsx';
+
+
 
 function App() {
   return (
     <>
+
       <div className="sub-root">
         {/* <FullPageScroll /> */}
         {/* <HomePage /> */}
         <TeamPage />
+         
         {/* <Blog/> */}
       </div>
+
     </>
   )
 }
