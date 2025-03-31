@@ -3,6 +3,7 @@ import styles from './UserProfileCard.module.css';
 const UserProfileCard = ({ name, surname, title, image, github, linkedin, website }) => {
     return (
         <>
+            {/* bg-logo on index.css */}
             <div className="w-[240px] h-[340px] bg-white rounded-lg shadow-md overflow-hidden bg-logo">
                 <div className={`w-full h-full p-[15px] ${styles.glass}`}>
                     <div>

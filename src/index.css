@@ -42,7 +42,7 @@
 
 .bg-logo {
   height: auto;
-  background-image: url("../src/Images/Common/Background.png");
+  background-image: url("../src/Images/Common/Background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
