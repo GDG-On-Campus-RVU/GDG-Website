@@ -17,7 +17,7 @@ export default function FullPageScroll() {
     { component: <WhyJoinGDGSection /> },
     { component: <EventsSection isActive={currentSection === 2} />, color: "bg-green-500", text: "Events" },
     { component: <BlogsSection />, color: "bg-yellow-500", text: "Blogs" },
-    { component: <TeamSection />, color: "bg-purple-500", text: "Team" }
+    { component: <TeamSection isActive={currentSection === 4} />, color: "bg-purple-500", text: "Team" }
   ];
 
   useEffect(() => {
