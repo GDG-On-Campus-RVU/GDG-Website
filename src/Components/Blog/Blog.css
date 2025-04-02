@@ -8,7 +8,7 @@
   background: #000000; /* Google's blue */
   overflow: visible;
   border-radius: 15px;
-
+  perspective: 2000px;
 }
 
 /* Swiper Container */
@@ -91,26 +91,25 @@
 /* Read More Button */
 .read-more-btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 20px;
-  background: rgba(10, 80, 180, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   border: 2px solid #dbeafe;
   color: #dbeafe;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  margin-left: 62%;
+  border-radius: 8px;
+  font-size: 0.9rem;
 }
 
 .read-more-btn:hover {
   background: #dbeafe;
   color: #0f4db6;
-  box-shadow: 0 0 10px #dbeafe, 0 0 20px #dbeafe;
+  transform: translateY(-2px);
 }
+
 .swiper-slide-custom {
   width: 100% !important; /* Ensure each slide takes the full width */
   display: flex;
@@ -132,4 +131,45 @@
   height: 100%; /* Full height */
   object-fit: cover; /* Ensures it behaves like a banner */
   border-radius: 10px; /* Optional: Add rounded corners for a sleek look */
+}
+
+.blog-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px) scale(1.01) !important;
+}
+
+@media (max-width: 640px) {
+  .blog-card {
+    width: 90%;
+  }
+}
+
+.card-stack-container {
+  perspective: 2000px;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card-content {
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 90%;
+  }
 }

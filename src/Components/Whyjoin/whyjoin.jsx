@@ -25,7 +25,7 @@ const Whyjoin = () => {
           <div className="howjoin-text flex flex-col justify-center items-end text-right">
             <div className="howjoin-title text-2xl font-bold mb-6">How to Join GDG</div>
             <div className="howjoin-content text-lg font-normal">
-              Click on this <a href="https://whatsapp.com" className="underline font-semibold">WhatsApp link</a> to join GDG as a member and start learning and sharing.
+              Click on this WhatsApp link to join GDG as a member and start learning and sharing.
             </div>
           </div>
         </div>
