@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import FirstSection from "./FirstSection";
@@ -9,8 +9,7 @@ import TeamSection from "./TeamSection";
 
 export default function FullPageScroll() {
   const [currentSection, setCurrentSection] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  // const [isScrolling, setIsScrolling] = useState(false); // Scroll lock
+  const sectionsRef = useRef([]);
 
   // Define sections as an array of objects with properties
   const sections = [
@@ -22,44 +21,46 @@ export default function FullPageScroll() {
   ];
 
   useEffect(() => {
-    const handleScroll = (event) => {
-      if (isAnimating) return; 
-
-      if (event.deltaY > 0 && currentSection < sections.length - 1) {
-        setIsAnimating(true);
-        setCurrentSection((prev) => prev + 1);
-      } else if (event.deltaY < 0 && currentSection > 0) {
-        setIsAnimating(true);
-        setCurrentSection((prev) => prev - 1);
-      }
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px", // Triggers when 50% of the section is visible
+      threshold: 0
     };
 
-    window.addEventListener("wheel", handleScroll);
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = sectionsRef.current.indexOf(entry.target);
+          setCurrentSection(index);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sectionsRef.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
 
     return () => {
-      window.removeEventListener("wheel", handleScroll);
+      sectionsRef.current.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
     };
-  }, [currentSection, isAnimating]);
-
-    
+  }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden">
-      <motion.div
-        className="h-full w-full"
-        animate={{ translateY: `-${currentSection * 100}vh` }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        onAnimationComplete={() => setIsAnimating(false)} // Unlock scrolling after animation
-      >
-        {sections.map((section, index) => (
-          <div
-            key={index}
-            className={`h-screen flex items-center justify-center text-white text-4xl font-bold bg-black ${section.color}`}
-          >
-            {section.component}
-          </div>
-        ))}
-      </motion.div>
+    <div className="w-full overflow-y-scroll h-screen snap-y snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      {sections.map((section, index) => (
+        <div
+          key={index}
+          ref={(el) => (sectionsRef.current[index] = el)}
+          className={`h-screen flex items-center justify-center text-white text-4xl font-bold bg-black ${section.color} snap-start`}
+          style={{ overflow: 'hidden' }}
+        >
+          {section.component}
+        </div>
+      ))}
     </div>
   );
 }

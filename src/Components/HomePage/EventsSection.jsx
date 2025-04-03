@@ -31,7 +31,7 @@ const EventSlideshow = ({ isActive }) => {
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
-      }, 2500);
+      }, 4000); // Increased duration to keep loading screen visible longer
     }
   }, [isActive]);
 
@@ -47,14 +47,20 @@ const EventSlideshow = ({ isActive }) => {
 
   if (isLoading) {
     return (
-      <div className="h-screen w-full flex flex-col justify-center items-center bg-black text-white relative overflow-hidden">
+      <motion.div 
+        className="h-screen w-full flex flex-col justify-center items-center bg-black text-white relative overflow-hidden"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         {/* Logo Animation */}
         <motion.img
           src={eventLogo}
           alt="Event Logo"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           className="w-40 absolute"
         />
   
@@ -62,12 +68,13 @@ const EventSlideshow = ({ isActive }) => {
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
+          exit={{ opacity: 0, y: 200 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1.5 }}
           className="text-white text-6xl font-bold px-16 py-8 bg-green-600 rounded-2xl shadow-lg absolute flex items-center justify-center whitespace-nowrap"
         >
           Exciting Events !!!
         </motion.div>
-      </div>
+      </motion.div>
     );
   }
 
@@ -75,7 +82,7 @@ const EventSlideshow = ({ isActive }) => {
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
+      transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
       className="h-screen w-full flex flex-col justify-center items-center text-center p-6 relative"
     >
       <h1 className="text-5xl font-bold mb-6">Events</h1>
@@ -95,7 +102,7 @@ const EventSlideshow = ({ isActive }) => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full"
           >
             <GlassCardEvent
