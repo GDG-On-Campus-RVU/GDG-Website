@@ -68,7 +68,7 @@ export default function Leaderboard() {
 
   // Calculate total points for each participant
   const calculateTotalPoints = useCallback(() => {
-    const participants: { [key: string]: { id: number; name: string; score: number; time: string; date: string } } = {}
+    const participants: { key = [ id, name, score, time, date] } = {}
 
     leaderboardData.forEach((entry) => {
       if (!participants[entry.name]) {
