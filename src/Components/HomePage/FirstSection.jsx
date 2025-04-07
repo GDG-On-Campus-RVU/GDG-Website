@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
+import Spline from '@splinetool/react-spline';
+
+
+
 const ScrambleText = ({ text, onComplete }) => {
     const [displayedText, setDisplayedText] = useState(text);
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -77,20 +81,32 @@ function FirstSection() {
                     transition={{ duration: 1.5 }}
                 > 
                     {/* Left Section */}
+
                     <motion.div 
-                        className="text-center mt-20 col-span-0 flex items-center justify-center"
+                        className="absolute inset-0 z-0 flex items-center justify-center z-0"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                         onAnimationComplete={() => setShowHeading(true)}
-                    >
-                        Here we will add an image or a 3D element
-                    </motion.div>
+                        >
+                        <div style={{
+                            transform: 'scale(1.5) translateX(-20%)',
+                            transformOrigin: 'center',
+                            width: '100%',
+                            height: '100%',
+                            }}>
+                            <Spline 
+                                scene="https://prod.spline.design/bP7bWHRoYrCEc54f/scene.splinecode"
+                                style={{ width: '100vw', height: '100vh' }}
+                            />
+                        </div>
+
+                        </motion.div>
                     
                     {/* Right-Side Text */}
                     {showHeading && (
                         <motion.div 
-                            className="col-start-2 row-start-1 flex flex-col justify-end items-end text-right p-4 self-end"
+                            className="col-start-2 row-start-1 flex flex-col justify-end items-end text-right p-4 self-end z-10"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
@@ -104,7 +120,7 @@ function FirstSection() {
 
                     {showDescription && (
                         <motion.div 
-                            className="col-start-2 row-start-2 flex flex-col justify-start items-end text-right p-4"
+                            className="col-start-2 row-start-2 flex flex-col justify-start items-end text-right p-4 z-10"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
@@ -119,7 +135,7 @@ function FirstSection() {
                     {/* Bottom Center Text */}
                     {showGoChangeText && (
                         <motion.div 
-                            className="col-span-2 flex justify-center items-end p-4 font-bebas"
+                            className="col-span-2 flex justify-center items-end p-4 font-bebas z-10"
                             // initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1, duration: 1 }}
