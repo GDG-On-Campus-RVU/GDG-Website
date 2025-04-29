@@ -6,7 +6,7 @@ import EventPage from "./Components/EventPage/EventPage.jsx";
 import HomePage from "./Components/HomePage/HomePage.jsx";
 import Blog from './Components/Blog/Blog.jsx';
 // import Achivement from './Components/Achivement/Achivement.jsx';
-// import Leaderboard from './Components/Leaderboard/leaderboard.tsx';
+import Leaderboard from "./Components/Leaderboard/main";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/event" element={<EventPage/>}/>
           {/* <Route path="/achivement" element={<Achivement/>}/> */}
           <Route path="/blog" element={<Blog/>}/>
-          {/* <Route path="/leaderboard" element={<Leaderboard/>}/> */}
+          <Route path="/leaderboard" element={<Leaderboard/>}/>
         </Routes>
       </div>
     </Router>
