@@ -6,6 +6,7 @@ import styles from './TeamPage.module.css';
 
 function TeamPage() {
   const [teamsData, setTeamsData] = useState(null);
+  const [formerMembers, setFormerMembers] = useState([]);
   const [error, setError] = useState(null);
   const [activeTeam, setActiveTeam] = useState(null);
   const containerRef = useRef(null);
@@ -35,6 +36,7 @@ function TeamPage() {
       try {
         const response = await import('../../api/all_teams.json');
         setTeamsData(response.teams);
+        setFormerMembers(response.formerMembers);
       } catch (err) {
         setError(err);
         console.error("Error fetching team data:", err);
@@ -45,11 +47,12 @@ function TeamPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!teamsData) return;
+      if (!teamsData && formerMembers.length === 0) return;
 
-      const teamElements = Object.keys(teamsData)
-        .map(team => document.getElementById(team))
-        .filter(Boolean);
+      const teamElements = [
+        ...Object.keys(teamsData || {}).map(team => document.getElementById(team)),
+        document.getElementById("former-members")
+      ].filter(Boolean);
 
       teamElements.forEach((section) => {
         const rect = section.getBoundingClientRect();
@@ -62,7 +65,7 @@ function TeamPage() {
     const container = containerRef.current;
     container?.addEventListener("scroll", handleScroll);
     return () => container?.removeEventListener("scroll", handleScroll);
-  }, [teamsData]);
+  }, [teamsData, formerMembers]);
 
   const scrollToTeam = (teamName) => {
     const section = document.getElementById(teamName);
@@ -74,6 +77,27 @@ function TeamPage() {
     }
   };
 
+  const years = Array.from(
+    new Set(
+      formerMembers
+        .map(m => m.year)
+        .filter(year => year && year >= 2021)
+    )
+  ).sort((a, b) => b - a);
+
+  const membersByYear = years.reduce((acc, year) => {
+    acc[year] = formerMembers.filter(m => m.year === year);
+    return acc;
+  }, {});
+
+  const [selectedYear, setSelectedYear] = useState(years[0] || null);
+
+  useEffect(() => {
+    if (years.length > 0 && !years.includes(selectedYear)) {
+      setSelectedYear(years[0]);
+    }
+  }, [years, selectedYear]);
+
   return (
     <TemplatePage>
       <div className="fixed top-0 z-50 bg-black w-full flex gap-2 px-4 py-3">
@@ -84,6 +108,12 @@ function TeamPage() {
             className={`w-4 h-4 rounded-full transition-colors duration-300 ${activeTeam === teamName ? teamColors[index] : "bg-gray-300"}`}
           />
         ))}
+        {formerMembers.length > 0 && (
+          <button
+            onClick={() => scrollToTeam("former-members")}
+            className={`w-4 h-4 rounded-full transition-colors duration-300 ${activeTeam === "former-members" ? "bg-red-500" : "bg-gray-300"}`}
+          />
+        )}
       </div>
 
       <div
@@ -149,6 +179,61 @@ function TeamPage() {
             </div>
           </section>
         ))}
+
+        {formerMembers.length > 0 && (
+          <section
+            id="former-members"
+            className="snap-start min-h-screen w-full bg-black px-4 pt-12"
+          >
+            <div className="w-full text-white">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="text-4xl font-bold text-red-500 mb-8"
+              >
+                Former Members
+              </motion.h2>
+
+              <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
+                {years.map(year => (
+                  <button
+                    key={year}
+                    onClick={() => setSelectedYear(year)}
+                    className={`px-4 py-2 rounded-full border-3 transition 
+                      ${selectedYear === year 
+                        ? 'bg-red-500 text-white border-red-500' 
+                        : 'bg-black text-white-400 border-red-400 hover:bg-red-400 hover:text-white'}`}
+                  >
+                    {year}
+                  </button>
+                ))}
+              </div>
+
+              {selectedYear && (
+                <div className="flex flex-wrap gap-4">
+                  {membersByYear[selectedYear].map((member, idx) => (
+                    <motion.div
+                      key={`former-${selectedYear}-${idx}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.05 }}
+                    >
+                      <UserProfileCard
+                        name={member.name}
+                        surname={member.surname}
+                        title={member.title}
+                        image={member.profileImage}
+                        github={member.links.github}
+                        linkedin={member.links.linkedin}
+                        website={member.links.portfolio}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        )}
       </div>
     </TemplatePage>
   );

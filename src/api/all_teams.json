@@ -485,5 +485,103 @@
                 }
             }
         ]
-    }
+    },
+    "formerMembers": [
+        {
+            "name": "John",
+            "surname": "Doe",
+            "title": "Former President",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2024,
+            "links": {
+                "github": "https://github.com/johndoe",
+                "linkedin": "https://linkedin.com/in/johndoe",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Jane",
+            "surname": "Smith",
+            "title": "Former Vice President",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2024,
+            "links": {
+                "github": "https://github.com/janesmith",
+                "linkedin": "https://linkedin.com/in/janesmith",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Alice",
+            "surname": "Brown",
+            "title": "Former Technical Lead",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2023,
+            "links": {
+                "github": "https://github.com/alicebrown",
+                "linkedin": "https://linkedin.com/in/alicebrown",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Bob",
+            "surname": "Johnson",
+            "title": "Former Technical Member",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2023,
+            "links": {
+                "github": "https://github.com/bobjohnson",
+                "linkedin": "https://linkedin.com/in/bobjohnson",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Charlie",
+            "surname": "Davis",
+            "title": "Former Design Lead",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2022,
+            "links": {
+                "github": "https://github.com/charliedavis",
+                "linkedin": "https://linkedin.com/in/charliedavis",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Eve",
+            "surname": "Miller",
+            "title": "Former Design Member",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2022,
+            "links": {
+                "github": "https://github.com/evemiller",
+                "linkedin": "https://linkedin.com/in/evemiller",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Frank",
+            "surname": "Wilson",
+            "title": "Former Event Lead",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2021,
+            "links": {
+                "github": "https://github.com/frankwilson",
+                "linkedin": "https://linkedin.com/in/frankwilson",
+                "portfolio": "#"
+            }
+        },
+        {
+            "name": "Grace",
+            "surname": "Taylor",
+            "title": "Former Event Member",
+            "profileImage": "../src/Images/2025/Krishna.webp",
+            "year": 2021,
+            "links": {
+                "github": "https://github.com/gracetaylor",
+                "linkedin": "https://linkedin.com/in/gracetaylor",
+                "portfolio": "#"
+            }
+        }
+    ]
 }
