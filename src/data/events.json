@@ -1,0 +1,234 @@
+[
+  {
+      "id": 1,
+      "eventName": "Leetcode Screening Test",
+      "eventPic": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      "eventTime": "11:00 a.m",
+      "eventDate": "28th Feb, 2025",
+      "eventVenue": "Computer labs 5th floor C block",
+      "rsvpLink": "https://rsvp-link.com/leetcode",
+      "about": "We need some nerdy people for RVU placements. This screening test is for that purpose and to fill the GDG Events log.",
+      "speaker": "Sri Krishna R Hebbar",
+      "contact": "6969696969",
+      "mailId": "srikrishnar.btech23@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Who can attend?",
+              "answer": "Anyone from RVU can attend."
+          },
+          {
+              "question": "Is it free?",
+              "answer": "Yes, it's completely free."
+          }
+      ],
+      "perks": [
+          "Certificate of participation",
+          "Networking with peers",
+          "Learning advanced problem solving"
+      ],
+      "tag": "upcoming"
+  },
+  {
+      "id": 2,
+      "eventName": "AI Bootcamp",
+      "eventPic": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      "eventTime": "2:00 p.m",
+      "eventDate": "5th Mar, 2025",
+      "eventVenue": "Seminar Hall, Main Block",
+      "rsvpLink": "https://rsvp-link.com/aibootcamp",
+      "about": "A hands-on bootcamp to learn the basics and applications of Artificial Intelligence.",
+      "speaker": "Dr. Jane Doe",
+      "contact": "9876543210",
+      "mailId": "jane.doe@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Do I need prior experience?",
+              "answer": "No prior experience required."
+          },
+          {
+              "question": "Will there be a project?",
+              "answer": "Yes, a mini project is included."
+          }
+      ],
+      "perks": [
+          "AI Bootcamp completion certificate",
+          "Project experience",
+          "Mentorship from experts"
+      ],
+      "tag": "done"
+  },
+  {
+      "id": 3,
+      "eventName": "Blockchain Workshop",
+      "eventPic": "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      "eventTime": "10:00 a.m",
+      "eventDate": "10th Mar, 2025",
+      "eventVenue": "Auditorium, A block",
+      "rsvpLink": "https://rsvp-link.com/blockchain",
+      "about": "An intensive workshop on blockchain technology and its applications.",
+      "speaker": "Mr. John Smith",
+      "contact": "9123456780",
+      "mailId": "john.smith@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Is this workshop for beginners?",
+              "answer": "Yes, beginners are welcome."
+          },
+          {
+              "question": "Will there be hands-on sessions?",
+              "answer": "Yes, hands-on sessions are included."
+          }
+      ],
+      "perks": [
+          "Certificate of participation",
+          "Networking opportunities",
+          "Access to blockchain resources"
+      ],
+      "tag": "upcoming"
+  },
+  {
+      "id": 4,
+      "eventName": "Cybersecurity Seminar",
+      "eventPic": "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+      "eventTime": "3:00 p.m",
+      "eventDate": "15th Mar, 2025",
+      "eventVenue": "Conference Room, B block",
+      "rsvpLink": "https://rsvp-link.com/cybersecurity",
+      "about": "A seminar focusing on the latest trends and threats in cybersecurity.",
+      "speaker": "Dr. Alice Johnson",
+      "contact": "8912345670",
+      "mailId": "alice.johnson@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Who should attend?",
+              "answer": "Students and professionals interested in cybersecurity."
+          },
+          {
+              "question": "Will there be a Q&A session?",
+              "answer": "Yes, a Q&A session is included."
+          }
+      ],
+      "perks": [
+          "Certificate of attendance",
+          "Insights from industry experts",
+          "Networking with professionals"
+      ],
+      "tag": "done"
+  },
+  {
+      "id": 5,
+      "eventName": "Data Science Hackathon",
+      "eventPic": "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+      "eventTime": "9:00 a.m",
+      "eventDate": "20th Mar, 2025",
+      "eventVenue": "Innovation Lab, C block",
+      "rsvpLink": "https://rsvp-link.com/datascience",
+      "about": "A 24-hour hackathon to solve real-world data science problems.",
+      "speaker": "Prof. Robert Brown",
+      "contact": "7891234560",
+      "mailId": "robert.brown@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Can I participate in a team?",
+              "answer": "Yes, teams of up to 4 members are allowed."
+          },
+          {
+              "question": "What is the registration fee?",
+              "answer": "The event is free to attend."
+          }
+      ],
+      "perks": [
+          "Prizes for winning teams",
+          "Certificate of participation",
+          "Mentorship from data scientists"
+      ],
+      "tag": "done"
+  },
+  {
+      "id": 6,
+      "eventName": "Machine Learning Symposium",
+      "eventPic": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      "eventTime": "10:00 a.m",
+      "eventDate": "5th Apr, 2025",
+      "eventVenue": "Auditorium, A block",
+      "rsvpLink": "https://rsvp-link.com/mlsymposium",
+      "about": "A symposium featuring talks and discussions on machine learning.",
+      "speaker": "Dr. Sarah Green",
+      "contact": "9876543211",
+      "mailId": "sarah.green@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Who can attend?",
+              "answer": "Open to all students and faculty."
+          },
+          {
+              "question": "Will there be a live stream?",
+              "answer": "Yes, the event will be live-streamed."
+          }
+      ],
+      "perks": [
+          "Certificate of attendance",
+          "Insights from ML experts",
+          "Networking with peers"
+      ],
+      "tag": "upcoming"
+  },
+  {
+      "id": 7,
+      "eventName": "Quantum Computing Seminar",
+      "eventPic": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+      "eventTime": "3:00 p.m",
+      "eventDate": "10th Apr, 2025",
+      "eventVenue": "Conference Room, B block",
+      "rsvpLink": "https://rsvp-link.com/quantumseminar",
+      "about": "A seminar exploring the fundamentals and future of quantum computing.",
+      "speaker": "Prof. David Clark",
+      "contact": "8765432101",
+      "mailId": "david.clark@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Is this seminar for beginners?",
+              "answer": "Yes, no prior knowledge is required."
+          },
+          {
+              "question": "Will there be a Q&A session?",
+              "answer": "Yes, a Q&A session is included."
+          }
+      ],
+      "perks": [
+          "Certificate of attendance",
+          "Learning from quantum experts",
+          "Networking opportunities"
+      ],
+      "tag": "done"
+  },
+  {
+      "id": 8,
+      "eventName": "Cloud Computing Conference",
+      "eventPic": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      "eventTime": "11:00 a.m",
+      "eventDate": "20th Apr, 2025",
+      "eventVenue": "Auditorium, A block",
+      "rsvpLink": "https://rsvp-link.com/cloudconference",
+      "about": "A conference on the latest trends and technologies in cloud computing.",
+      "speaker": "Dr. Linda White",
+      "contact": "9876543201",
+      "mailId": "linda.white@rvu.edu.in",
+      "faqs": [
+          {
+              "question": "Who should attend?",
+              "answer": "Students and professionals interested in cloud computing."
+          },
+          {
+              "question": "Will there be a live stream?",
+              "answer": "Yes, the event will be live-streamed."
+          }
+      ],
+      "perks": [
+          "Certificate of attendance",
+          "Insights from cloud experts",
+          "Networking opportunities"
+      ],
+      "tag": "done"
+  }
+]

@@ -1,22 +1,40 @@
-import { useState } from "react";
-import EventHeader from "../EventPage/EventHeader.jsx";
-import CountdownTimer from "../EventPage/CountdownTimer.jsx";
-import EventDetails from "../EventPage/EventDetails.jsx";
-import SpeakersSection from "../EventPage/SpeakersSection.jsx";
-import TemplatePage from "../TemplatePage/TemplatePage.jsx";
+import React, { useState, useEffect } from 'react';
+import TemplatePage2 from '../TemplatePage/TemplatePage';
+import EventSidebar from './EventSidebar';
+import EventDetails from './EventDetails';
 
-export default function EventPage() {
-  const [selectedImage, setSelectedImage] = useState("/assets/default-event.jpg");
-  const eventDate = new Date("2025-03-01T18:00:00").getTime();
+const EventPage = () => {
+  const [events, setEvents] = useState([]);
+  const [selectedEventId, setSelectedEventId] = useState(null);
+
+  useEffect(() => {
+    import('../../data/events.json').then((mod) => setEvents(mod.default || mod));
+  }, []);
+
+  // Set the first upcoming event as the default selected event
+  useEffect(() => {
+    if (events.length > 0) {
+      const firstUpcomingEvent = events.find(event => event.tag === 'upcoming');
+      setSelectedEventId(firstUpcomingEvent ? firstUpcomingEvent.id : events[0].id);
+    }
+  }, [events]);
 
   return (
-    <TemplatePage>
-      <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen p-10 flex flex-col items-center space-y-10">
-        <EventHeader selectedImage={selectedImage} />
-        <CountdownTimer eventDate={eventDate} />
-        <EventDetails />
-        <SpeakersSection />
+    <TemplatePage2>
+      <div className="flex bg-[#040404] min-h-screen w-full font-['Violet Sans']">
+        {/* Main Content */}
+        <div className="flex-1 flex items-start py-6 px-6">
+          {events.length > 0 && <EventDetails event={events.find(event => event.id === selectedEventId)} />}
+        </div>
+        {/* Sidebar */}
+        <EventSidebar
+          events={events}
+          selectedEventId={selectedEventId}
+          onSelectEvent={setSelectedEventId}
+        />
       </div>
-    </TemplatePage>
+    </TemplatePage2>
   );
-}
+};
+
+export default EventPage;
