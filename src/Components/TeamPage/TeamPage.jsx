@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import UserProfileCard from "../UserProfileCard/UserProfileCard";
 import TemplatePage from "../TemplatePage/TemplatePage";
 import styles from './TeamPage.module.css';
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 function TeamPage() {
   const [teamsData, setTeamsData] = useState(null);
@@ -77,26 +78,18 @@ function TeamPage() {
     }
   };
 
-  const years = Array.from(
-    new Set(
-      formerMembers
-        .map(m => m.year)
-        .filter(year => year && year >= 2021)
-    )
-  ).sort((a, b) => b - a);
+  const years = Object.keys(formerMembers).sort((a, b) => b - a);
 
   const membersByYear = years.reduce((acc, year) => {
-    acc[year] = formerMembers.filter(m => m.year === year);
+    const domains = formerMembers[year];
+    const members = Object.entries(domains).flatMap(([domain, domainMembers]) =>
+      domainMembers.map((member) => ({ ...member, domain }))
+    );
+    acc[year] = members;
     return acc;
   }, {});
 
-  const [selectedYear, setSelectedYear] = useState(years[0] || null);
-
-  useEffect(() => {
-    if (years.length > 0 && !years.includes(selectedYear)) {
-      setSelectedYear(years[0]);
-    }
-  }, [years, selectedYear]);
+  const [selectedYear, setSelectedYear] = useState(null);
 
   return (
     <TemplatePage>
@@ -180,7 +173,7 @@ function TeamPage() {
           </section>
         ))}
 
-        {formerMembers.length > 0 && (
+        {formerMembers && Object.keys(formerMembers).length > 0 && (
           <section
             id="former-members"
             className="snap-start min-h-screen w-full bg-black px-4 pt-12"
@@ -194,43 +187,73 @@ function TeamPage() {
                 Former Members
               </motion.h2>
 
-              <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
-                {years.map(year => (
-                  <button
+              <div className="flex flex-col gap-4 mb-4">
+                {years.map((year) => (
+                  <div
                     key={year}
-                    onClick={() => setSelectedYear(year)}
-                    className={`px-4 py-2 rounded-full border-3 transition 
-                      ${selectedYear === year 
-                        ? 'bg-red-500 text-white border-red-500' 
-                        : 'bg-black text-white-400 border-red-400 hover:bg-red-400 hover:text-white'}`}
+                    className="border border-red-500 rounded-lg overflow-hidden"
                   >
-                    {year}
-                  </button>
+                    <button
+                      onClick={() =>
+                        setSelectedYear((prev) => (prev === year ? null : year))
+                      }
+                      className="w-full flex justify-between items-center px-4 py-3 bg-black text-white font-semibold text-left"
+                    >
+                      <span>GDG RVU Team {year}</span>
+                      {selectedYear === year ? (
+                        <ChevronUp className="w-5 h-5" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5" />
+                      )}
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {selectedYear === year && (
+                        <motion.div
+                          key={`content-${year}`}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="bg-neutral-900 px-4"
+                        >
+                          <div className="pt-2 pb-4 flex flex-col gap-6">
+                            {Object.entries(formerMembers[year]).map(
+                              ([domainName, domainMembers]) => (
+                                <div key={`${year}-${domainName}`}>
+                                  <h3 className="text-2xl font-semibold text-red-400 mb-3">
+                                    {domainName}
+                                  </h3>
+                                  <div className="flex flex-wrap gap-4">
+                                    {domainMembers.map((member, idx) => (
+                                      <motion.div
+                                        key={`former-${year}-${domainName}-${idx}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.05 }}
+                                      >
+                                        <UserProfileCard
+                                          name={member.name}
+                                          surname={member.surname}
+                                          title={member.title}
+                                          image={member.profileImage}
+                                          github={member.links.github}
+                                          linkedin={member.links.linkedin}
+                                          website={member.links.portfolio}
+                                        />
+                                      </motion.div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 ))}
               </div>
-
-              {selectedYear && (
-                <div className="flex flex-wrap gap-4">
-                  {membersByYear[selectedYear].map((member, idx) => (
-                    <motion.div
-                      key={`former-${selectedYear}-${idx}`}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.05 }}
-                    >
-                      <UserProfileCard
-                        name={member.name}
-                        surname={member.surname}
-                        title={member.title}
-                        image={member.profileImage}
-                        github={member.links.github}
-                        linkedin={member.links.linkedin}
-                        website={member.links.portfolio}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              )}
             </div>
           </section>
         )}
