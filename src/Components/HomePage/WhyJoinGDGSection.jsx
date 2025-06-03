@@ -5,7 +5,7 @@ export default function WhyJoinGDGSection() {
   return (
     <div className="min-h-screen w-full bg-black text-white flex items-center">
       <div className="max-w-[1920px] mx-auto py-32 px-4 md:px-16 w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-16 md:gap-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-20">
           {/* Left Section */}
           <motion.div 
           className="w-full md:w-2/5 space-y-12"

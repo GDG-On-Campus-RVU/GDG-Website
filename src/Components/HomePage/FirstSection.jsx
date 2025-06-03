@@ -126,8 +126,8 @@ function FirstSection() {
                             transition={{ duration: 0.8 }}
                             onAnimationComplete={() => setShowGoChangeText(true)}
                         >
-                            <p className="mt-2 text-2xl top=0 ">
-                                Description of GDG RVU blah blah blah blah blah blahlah blah blah blah blah blah blah blah blahlah blah blah blah blah blah blah blah blahlah blah blah blah blah blah blah blah blahlah blah 
+                            <p className="mt-2 text-2xl top=0">
+                                Welcome to Google Developer Groups On Campus at RV University! We are a vibrant community of aspiring engineers and developers passionate about technology and collaboration, fostering curiosity, creativity, and growth. 
                             </p>
                         </motion.div>
                     )}
@@ -140,7 +140,7 @@ function FirstSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1, duration: 1 }}
                         >
-                            <ScrambleText key="cta" text="GO CHANGE THE WORLD" onComplete={() => setShowMainContent(true)} />
+                            <ScrambleText key="cta" text="CODE THE CHANGE YOU WANT TO SEE!" onComplete={() => setShowMainContent(true)} />
                         </motion.div>
                     )}
                 </motion.div>
