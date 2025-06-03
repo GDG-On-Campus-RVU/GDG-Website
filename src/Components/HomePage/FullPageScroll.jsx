@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense} from "react";
 import { motion } from "framer-motion";
 
-import FirstSection from "./FirstSection";
-import WhyJoinGDGSection from "./WhyJoinGDGSection";
-import EventsSection from "./EventsSection";
-import BlogsSection from "./BlogsSection";
-import TeamSection from "./TeamSection";
+const FirstSection = lazy(() => import("./FirstSection"));
+const WhyJoinGDGSection = lazy(() => import("./WhyJoinGDGSection"));
+const EventsSection = lazy(() => import("./EventsSection"));
+const BlogsSection = lazy(() => import("./BlogsSection"));
+const TeamSection = lazy(() => import("./TeamSection"));
 
 export default function FullPageScroll() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -15,7 +15,7 @@ export default function FullPageScroll() {
   const sections = [
     { component: <FirstSection /> },
     { component: <WhyJoinGDGSection /> },
-    { component: <EventsSection isActive={currentSection === 2} />, color: "bg-green-500", text: "Events" },
+    { component: <EventsSection isActive={currentSection === 2} />, color: "bg-black-500", text: "Events" },
     { component: <BlogsSection />, color: "bg-yellow-500", text: "Blogs" },
     { component: <TeamSection isActive={currentSection === 4} />, color: "bg-purple-500", text: "Team" }
   ];

@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import eventLogo from "../../assets/SVG/events_logo.svg";
 
-
 const GlassCardEvent = ({ image, title, description, link }) => {
   const maxLength = 100;
   const truncatedText =
@@ -31,13 +30,14 @@ const GlassCardEvent = ({ image, title, description, link }) => {
           src={image}
           alt={title}
           className="w-full h-48 object-cover rounded-lg relative z-10"
+          loading="lazy" // Add lazy loading
         />
       )}
 
       {/* Text Content with independent scaling */}
       <motion.div className="mt-4 relative z-10">
         <h2 className="text-2xl font-semibold text-white break-words">{title}</h2>
-        
+
         <p className="text-gray-300 mt-2 break-words text-[15px]">
           {truncatedText}
           {description.length > maxLength && (
@@ -50,6 +50,3 @@ const GlassCardEvent = ({ image, title, description, link }) => {
 };
 
 export default GlassCardEvent;
-
-
-
