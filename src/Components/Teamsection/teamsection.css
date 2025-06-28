@@ -76,7 +76,7 @@
   justify-content: center;
   text-decoration: none;
   transition: transform 0.3s ease;
-  background-image: url('../../Images/Common/gdg-logo.png');
+  /* background-image: url('../../Images/Common/gdg-logo.png'); */
   background-size: cover;
   background-position: center;
   overflow: hidden;
