@@ -2,9 +2,10 @@
 [
    
     {
-      "title": "The 10 Most Common Mistakes JavaScript Developers Make",
-      "author": "Jane Smith",
-      "link": "https://betterprogramming.pub/the-10-most-common-mistakes-javascript-developers-make-23b5749f27e3"
+      "title": "A Year of Code, Community, and Impact: Our 2024-25 Journey with GDG at RV University",
+      "author": "GDG on Campus, RVU",
+      "link": "https://medium.com/@gdgoncampus/a-year-of-code-community-and-impact-our-2024-25-journey-with-gdg-at-rv-university-dd17ac0ae41f",
+      "image" : "../src/Images/blog/GDG RVU 2024 - 25.webp"
     },
     {
       "title": "5 Essential Machine Learning Algorithms You Should Know",
@@ -23,11 +24,6 @@
       "author": "Ben Halpern",
       "link": "https://dev.to/ben/the-truth-about-becoming-a-full-stack-developer-4po7",
       "image": "../src/Images/blog/FullStack.jpeg"
-    },
-    {
-      "title": "Why You Should Learn Functional Programming",
-      "author": "Chris Coyier",
-      "link": "https://css-tricks.com/why-you-should-learn-functional-programming/"
     }
   ]
   
