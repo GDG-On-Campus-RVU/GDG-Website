@@ -11,7 +11,6 @@ const EventPage = () => {
     import('../../data/events.json').then((mod) => setEvents(mod.default || mod));
   }, []);
 
-  // Set the first upcoming event as the default selected event
   useEffect(() => {
     if (events.length > 0) {
       const firstUpcomingEvent = events.find(event => event.tag === 'upcoming');
@@ -21,17 +20,22 @@ const EventPage = () => {
 
   return (
     <TemplatePage2>
-      <div className="flex bg-[#040404] min-h-screen w-full font-['Violet Sans']">
-        {/* Main Content */}
-        <div className="flex-1 flex items-start py-6 px-6">
-          {events.length > 0 && <EventDetails event={events.find(event => event.id === selectedEventId)} />}
+      <div className="flex flex-row gap-4 min-h-screen w-full font-['Violet_Sans'] p-4">
+        {/* Event Details */}
+        <div className="flex-1">
+          {events.length > 0 && (
+            <EventDetails event={events.find(event => event.id === selectedEventId)} />
+          )}
         </div>
+
         {/* Sidebar */}
-        <EventSidebar
-          events={events}
-          selectedEventId={selectedEventId}
-          onSelectEvent={setSelectedEventId}
-        />
+        <div className="w-[240px] h-[calc(100vh-32px)] overflow-y-auto scrollbar-thin scrollbar-thumb-[#5483eb] scrollbar-track-[#0e0e0e]">
+          <EventSidebar
+            events={events}
+            selectedEventId={selectedEventId}
+            onSelectEvent={setSelectedEventId}
+          />
+        </div>
       </div>
     </TemplatePage2>
   );

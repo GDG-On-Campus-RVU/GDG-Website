@@ -10,8 +10,8 @@ const EventDetails = ({ event }) => {
     <div className="flex flex-col md:flex-row gap-6 w-full font-['Violet Sans']">
       {/* Main Event Card */}
       <div className="flex-1 bg-gray-900 rounded-xl p-6 shadow-lg font-['Violet Sans'] ml-0">
-        <div className="w-full h-48 bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden">
-          <img src={event.eventPic} alt={event.eventName} className="object-cover w-full h-full" />
+        <div className="w-full bg-gray-800 rounded mb-4 overflow-hidden">
+          <img src={event.eventPic} alt={event.eventName} className="w-full h-auto rounded" />
         </div>
         <h2 className="text-2xl font-bold text-white mb-2">{event.eventName}</h2>
         <div className="flex flex-wrap items-center gap-4 mb-3">
@@ -70,7 +70,7 @@ const EventDetails = ({ event }) => {
         </div>
       </div>
       {/* Spacer for sidebar on large screens */}
-      <div className="hidden lg:block w-16" />
+      {/* <div className="hidden lg:block w-16" /> */}
     </div>
   );
 };
