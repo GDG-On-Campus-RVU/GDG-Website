@@ -52,7 +52,10 @@ const TeamSection = ({ isActive }) => {
 
   return (
     <TemplatePage>
-      <div className="h-screen w-screen flex justify-center items-center bg-black overflow-hidden">
+      <div className="h-screen w-screen flex flex-col items-center justify-center bg-black overflow-hidden text-white px-10 py-20 relative">
+        <h1 className="text-4xl font-bold text-white tracking-wide">
+            GDG RVU 2024-25 Core Members
+        </h1>
         {/* Container to Ensure Centering */}
         <div className="relative w-full h-full flex justify-center items-center">
           {/* Whole Logo Initially */}
