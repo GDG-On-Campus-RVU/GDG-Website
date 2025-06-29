@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import UserProfileCard from '../UserProfileCard/UserProfileCard';
-import leftArrow from '../../Images/Common/leftarrow.png';
-import rightArrow from '../../Images/Common/rightarrow.png';
 import TemplatePage from '../TemplatePage/TemplatePage';
 import allTeamsData from '../../api/all_teams.json';
 import './teamsection.css';
@@ -55,7 +53,7 @@ const TeamSection = () => {
         <div className="team-showcase">
           <div className="carousel-left">
             <button className="arrow-btn prev" onClick={prevSlide}>
-              <img src={leftArrow} alt="Previous" />
+              <img src="/images/Common/leftarrow.png" alt="Previous" />
             </button>
             
             <div className="carousel-content">
@@ -83,7 +81,7 @@ const TeamSection = () => {
           </div>
 
           <button className="arrow-btn next" onClick={nextSlide}>
-            <img src={rightArrow} alt="Next" />
+            <img src="/images/Common/rightarrow.png" alt="Next" />
           </button>
         </div>
       </div>

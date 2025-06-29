@@ -1,7 +1,5 @@
 import React from 'react';
 import Dropdown from './Dropdown';
-import calendarIcon from '../../Images/Common/calendar.png';
-import locationIcon from '../../Images/Common/location.png';
 
 const EventDetails = ({ event }) => {
   if (!event) return null;
@@ -16,11 +14,11 @@ const EventDetails = ({ event }) => {
         <h2 className="text-2xl font-bold text-white mb-2">{event.eventName}</h2>
         <div className="flex flex-wrap items-center gap-4 mb-3">
           <span className="flex items-center text-gray-300 text-sm">
-            <img src={calendarIcon} alt="calendar" className="w-5 h-5 mr-1 inline-block align-middle" />
+            <img src="/images/Common/calendar.png" alt="calendar" className="w-5 h-5 mr-1 inline-block align-middle" />
             {event.eventTime} {event.eventDate}
           </span>
           <span className="flex items-center text-gray-300 text-sm">
-            <img src={locationIcon} alt="location" className="w-5 h-5 mr-1 inline-block align-middle" />
+            <img src="/images/Common/location.png" alt="location" className="w-5 h-5 mr-1 inline-block align-middle" />
             {event.eventVenue}
           </span>
           <span className={`ml-2 font-semibold ${event.tag === 'upcoming' ? 'text-[#f1bf42]' : 'text-[#489b5f]'}`}>

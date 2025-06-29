@@ -1,6 +1,5 @@
 import React from 'react';
 import TemplatePage from '../TemplatePage/TemplatePage';
-import redsymbol from '../../images/Common/redsymbol.png';
 
 const Whyjoin = () => {
   return (
@@ -18,7 +17,7 @@ const Whyjoin = () => {
 
           {/* Middle Column - GDG Symbol (Vertically Centered) */}
           <div className="gdgsymbol-container flex justify-center items-center">
-            <img src={redsymbol} alt="GDG Symbol" className="gdgsymbol-image " />
+            <img src="/images/Common/redsymbol.png" alt="GDG Symbol" className="gdgsymbol-image " />
           </div>
 
           {/* Right Column - How to Join GDG */}

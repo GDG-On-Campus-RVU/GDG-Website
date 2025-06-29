@@ -5,25 +5,25 @@
       "title": "A Year of Code, Community, and Impact: Our 2024-25 Journey with GDG at RV University",
       "author": "GDG on Campus, RVU",
       "link": "https://medium.com/@gdgoncampus/a-year-of-code-community-and-impact-our-2024-25-journey-with-gdg-at-rv-university-dd17ac0ae41f",
-      "image" : "../src/Images/blog/GDG RVU 2024 - 25.webp"
+      "image" : "/images/blog/GDG RVU 2024 - 25.webp"
     },
     {
       "title": "5 Essential Machine Learning Algorithms You Should Know",
       "author": "Michael Johnson",
       "link": "https://towardsdatascience.com/5-essential-machine-learning-algorithms-you-should-know-55c6182de2eb",
-      "image": "../src/Images/blog/code.jpg"
+      "image": "/images/blog/code.jpg"
     },
     {
       "title": "How to Avoid Burnout as a Software Developer",
       "author": "Emily Davis",
       "link": "https://medium.com/hackernoon/how-to-avoid-burnout-as-a-software-developer-5e8d2c244142",
-      "image": "../src/Images/blog/computer-coding-banner-img.png"
+      "image": "/images/blog/computer-coding-banner-img.png"
     },
     {
       "title": "The Truth About Becoming a Full-Stack Developer",
       "author": "Ben Halpern",
       "link": "https://dev.to/ben/the-truth-about-becoming-a-full-stack-developer-4po7",
-      "image": "../src/Images/blog/FullStack.jpeg"
+      "image": "/images/blog/fullstack.jpeg"
     }
   ]
   

@@ -31,7 +31,7 @@ export default function WhyJoinGDGSection() {
           {/* Logo in the middle */}
           <div className="w-48 h-48 md:w-[400px] md:h-[400px] flex-shrink-0 flex items-center justify-center">
             <img 
-              src="/src/Images/Common/redsymbol.png" 
+              src="/images/Common/redsymbol.png" 
               alt="GDG Logo" 
               className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
             />

@@ -48,8 +48,8 @@ const Blog = () => {
                                     {index === 0 ? (
                                         <div className="card-content overflow-hidden rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm" style={slideStyle}>
                                             <img 
-                                                src="/src/Images/Common/Bluesymbol.png"
-                                                alt="Blue Symbol"
+                                                src="/images/Common/Bluesymbol.png"
+                                                alt="Blog Symbol"
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>

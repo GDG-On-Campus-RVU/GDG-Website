@@ -2,7 +2,7 @@
     {
         "id": 1,
         "eventName": "Get to Know GDG - Info Session",
-        "eventPic": "src/Images/events/Get to Know GDG - Info Session.jpg",
+        "eventPic": "/images/events/Get to Know GDG - Info Session.jpg",
         "eventTime": "5:00 - 6:00 PM",
         "eventDate": "28th Sep, 2024",
         "eventVenue": "Online",
@@ -30,7 +30,7 @@
     {
         "id": 2,
         "eventName": "Kickstart Your AI Journey: Google Gen AI Study Jams Info Session",
-        "eventPic": "src/Images/events/Google Gen AI Study Jams Info Session.jpg",
+        "eventPic": "/images/events/Google Gen AI Study Jams Info Session.jpg",
         "eventTime": "12:00 - 1:00 PM",
         "eventDate": "12th Oct, 2024",
         "eventVenue": "Online",
@@ -143,7 +143,7 @@
     {
         "id": 6,
         "eventName": "CodeVerse (Leetcode Community)",
-        "eventPic": "src/Images/events/CodeVerse (Leetcode Community).jpg",
+        "eventPic": "/images/events/CodeVerse (Leetcode Community).jpg",
         "eventTime": "",
         "eventDate": "4th Mar - 7th Mar, 2025",
         "eventVenue": "RV University",
@@ -173,7 +173,7 @@
     {
         "id": 7,
         "eventName": "Build with AI: Student Innovations for Real-World Impact",
-        "eventPic": "src/Images/events/Build with AI.jpg",
+        "eventPic": "/images/events/Build with AI.jpg",
         "eventTime": "11:00 AM - 12:00 PM",
         "eventDate": "30th Apr, 2025",
         "eventVenue": "Online",
