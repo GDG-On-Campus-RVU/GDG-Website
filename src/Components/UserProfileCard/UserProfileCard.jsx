@@ -12,7 +12,7 @@ const UserProfileCard = ({ name, surname, title, image, github, linkedin, websit
                             <h2 className="text-xl text-white">{name}</h2>
                             <h2 className="text-xl text-white">{surname}</h2>
                             <p className="text-gray-300 text-sm">{title}</p>
-                            <div className="flex flex-row justify-between space-x-3 mt-4">
+                            <div className="flex flex-row justify-between space-x-3 everything">
                                 {/* Github link */}
                                 <div className='left-links flex space-x-3'>
                                 {github != '#' && (
